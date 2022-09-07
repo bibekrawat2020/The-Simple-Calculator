@@ -16,3 +16,23 @@ Console.WriteLine("\ts - Subtract");
 Console.WriteLine("\tm - Multiply");
 Console.WriteLine("\td - Divide");
 Console.Write("Your option? ");
+
+//Switch case for performing the operation
+switch (Console.ReadLine())
+{
+    case "a":
+        Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+        break;
+    case "s":
+        Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+        break;
+    case "m":
+        Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+        break;
+    case "d":
+        Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
+        break;
+    default:
+        Console.WriteLine("Invalid choice");
+        break;
+}
