@@ -36,3 +36,7 @@ switch (Console.ReadLine())
         Console.WriteLine("Invalid choice");
         break;
 }
+
+//For waiting response from the user before closing
+Console.WriteLine("Press any key to close the app....");
+Console.ReadKey();
