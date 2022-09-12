@@ -16,27 +16,31 @@ Console.WriteLine("\ts - Subtract");
 Console.WriteLine("\tm - Multiply");
 Console.WriteLine("\td - Divide");
 Console.Write("Your option? ");
+string Action = Console.ReadLine();
 
 //Switch case for performing the operation
-switch (Console.ReadLine())
+void operation (int num1, int num2, string Action)
 {
-    case "a":
-        Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
-        break;
-    case "s":
-        Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
-        break;
-    case "m":
-        Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
-        break;
-    case "d":
-        Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
-        break;
-    default:
-        Console.WriteLine("Invalid choice");
-        break;
+    switch (Action)
+    {
+        case "a":
+            Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+            break;
+        case "s":
+            Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+            break;
+        case "m":
+            Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+            break;
+        case "d":
+            Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
+            break;
+        default:
+            Console.WriteLine("Invalid choice");
+            break;
+    }
 }
-
+operation(num1, num2, Action);
 //For waiting response from the user before closing
 Console.WriteLine("Press any key to close the app....");
 Console.ReadKey();
